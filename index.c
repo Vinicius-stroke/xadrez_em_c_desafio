@@ -4,21 +4,21 @@
 // Funções Recursivas
 // ============================
 
-// Torre: move-se em linha reta (direita)
+
 void moverTorre(int casas) {
     if (casas == 0) return;
     printf("Direita\n");
     moverTorre(casas - 1);
 }
 
-// Bispo: recursivo (diagonal cima-direita)
+
 void moverBispoRecursivo(int casas) {
     if (casas == 0) return;
     printf("Cima Direita\n");
     moverBispoRecursivo(casas - 1);
 }
 
-// Rainha: recursivo (esquerda)
+
 void moverRainha(int casas) {
     if (casas == 0) return;
     printf("Esquerda\n");
@@ -30,8 +30,8 @@ void moverRainha(int casas) {
 // ============================
 void moverBispoLoops(int casas) {
     int i, j;
-    for (i = 1; i <= casas; i++) {        // movimento vertical
-        for (j = 1; j <= 1; j++) {        // movimento horizontal (sempre direita)
+    for (i = 1; i <= casas; i++) {        
+        for (j = 1; j <= 1; j++) {        
             printf("Cima Direita\n");
         }
     }
@@ -40,26 +40,26 @@ void moverBispoLoops(int casas) {
 // ============================
 // Cavalo com Loops Aninhados
 // ============================
-// Movimento: 2 casas para cima, 1 para direita
+
 void moverCavalo() {
     int up = 0, right = 0;
 
     for (up = 1; up <= 2; up++) {
         if (up == 2) {
-            // quando chegar na segunda casa, sai do loop
+            
             printf("Cima\n");
             break;
         }
         printf("Cima\n");
     }
 
-    // loop para o movimento horizontal
+   
     int i = 0;
     while (i < 2) {
         i++;
         if (i == 1) {
             printf("Direita\n");
-            continue;  // imprime direita e pula
+            continue;  
         }
         // condição para interromper
         if (i > 1) break;
@@ -96,3 +96,4 @@ int main() {
 
     return 0;
 }
+
